@@ -3,7 +3,13 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/factoryworkers",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "factoryworkers.independence-events.com"
+        }
+      ],
       "destination": "/factoryworkers/index.html"
     }
   ],
