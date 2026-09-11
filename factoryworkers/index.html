@@ -127,10 +127,10 @@ nav {
 .tape-strip {
   width:100%;
   background:#CE00F2;
-  padding:14px 0;
+  padding:14px 8px;
   display:flex; align-items:center; justify-content:center;
-  gap:20px; overflow:hidden;
-  position:relative; flex-wrap:nowrap;
+  gap:12px; overflow:hidden;
+  position:relative; flex-wrap:wrap;
 }
 .tape-strip::before {
   content:''; position:absolute; inset:0;
@@ -401,6 +401,15 @@ footer {
 .form-section .success p { color:#858585; font-size:14px; line-height:1.7; }
 .form-section .success p b { color:#f2f0ec; font-weight:600; }
 
+
+@media (max-width:480px) {
+  .tape-strip { gap:8px; padding:12px 6px; }
+  .tape-item { font-size:10px !important; letter-spacing:1.5px !important; }
+  .tape-dot { display:none; }
+  .split-headline { font-size:32px !important; }
+  .hero-headline { font-size:52px !important; }
+}
+
 </style>
 </head>
 <body>
@@ -533,7 +542,7 @@ footer {
   </div>
   <div class="field">
     <label for="venue"><span id="lblVenue">Venue (or "still deciding")</span></label>
-    <input id="venue" name="venue" type="text" placeholder="The Factory Workers">
+    <input id="venue" name="venue" type="text" placeholder="Venue name">
   </div>
 </div>
 
